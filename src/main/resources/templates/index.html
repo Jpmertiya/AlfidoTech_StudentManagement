@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Alfido Landing Page</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet">
+	<style>
+		/* Basic CSS for styling purposes */
+		body {
+			font-family: Arial, sans-serif;
+			display: block;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			background-color: #f2f2f2;
+		}
+
+		.container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		}
+
+		.form-container {
+			flex: 1;
+			padding: 10px;
+		}
+
+		.form-container label {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		.form-container input,
+		.form-container select {
+			width: 100%;
+			padding: 8px;
+			margin-bottom: 10px;
+		}
+
+		.image-container {
+			flex: 1;
+
+			text-align: center;
+		}
+
+		.image-container img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.navbar {
+			margin-top: 5px;
+			;
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			box-shadow: 0 5px 0 goldenrod;
+			text-align: center;
+		}
+
+		.footer {
+			text-align: center;
+			padding: 10px;
+			background-color: #333;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="navbar">
+		<h1>Alfido</h1>
+	</div>
+	<div class="container">
+		<div class="form-container">
+			<h2>Student Registration Form <i class="fa-duotone fa-plus"></i><span th:if="${msg != null}">
+					<p th:text="${msg}" style="color: mediumspringgreen;"></p>
+				</span></h2>
+			<form action="/api/newstudent" method="post">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" class="form-control" required>
+
+				<label for="lastName">Last Name:</label>
+				<input type="text" id="lastName" class="form-control" name="lname" required>
+
+				<label for="fatherName">Father's Name:</label>
+				<input type="text" id="fatherName" name="fname" class="form-control" required>
+
+				<label for="dob">Date of Birth:</label>
+				<input type="date" id="dob" name="dob" class="form-control" required>
+
+				<label for="dob">Class:</label>
+				<input type="text" id="clas" name="clas" class="form-control" required>
+
+				<label for="subject1">Subject 1:</label>
+				<input type="text" class="form-control" id="subject1" name="subject1" required><br>
+
+				<label for="subject2">Subject 2:</label>
+				<input type="text" class="form-control" id="subject2" name="subject2" required><br>
+
+				<label for="subject3">Subject 3:</label>
+				<input type="text" class="form-control" id="subject3" name="subject3" required><br>
+
+				<label for="subject4">Subject 4:</label>
+				<input type="text" class="form-control" id="subject4" name="subject4" required><br>
+
+				<label for="subject5">Subject 5:</label>
+				<input type="text" class="form-control" id="subject5" name="subject5" required><br>
+
+				<button type="submit" class="form-control button bg-warning">Submit</button>
+				<button type="reset" class="form-control button bg-primary">Reset</button>
+			</form>
+		</div>
+		<div class="image-container">
+			<img src="/one.png" alt="Image">
+		</div>
+	</div>
+	<div class="footer">
+		&copy; 2023 LKS. All rights reserved.
+	</div>
+</body>
+
+</html>
